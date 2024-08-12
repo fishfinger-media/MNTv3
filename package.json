@@ -11,8 +11,5 @@
     "rimraf": "^3.0.2",
     "vite": "^2.7.2",
     "vite-plugin-glsl": "^0.1.1"
-  },
-  "dependencies": {
-    "gsap": "npm:@gsap/shockingly@^3.12.5"
   }
 }
