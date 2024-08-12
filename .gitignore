@@ -26,5 +26,4 @@ coverage/
 *.temp
 
 # Build output directories
-dist/
 build/
