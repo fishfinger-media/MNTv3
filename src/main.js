@@ -14,7 +14,7 @@ const swiper = new Swiper('.swiper', {
     
     navigation: {
         nextEl: '[data-slide="next"]',
-        prevEl: '.swiper-button-prev',
+        prevEl: '[data-slide="prev"]',
     },
 
     on: {
