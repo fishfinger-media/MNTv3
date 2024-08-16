@@ -28,30 +28,31 @@ const swiper = new Swiper('.swiper', {
 // Function to animate slide content
 function animateSlideContent() {
     // Split text into words for animation
-    const splitText = new SplitType('.swiper-slide-active .slide_content-wrapper .flex_center_start p', {
+    const splitText = new SplitType('.swiper-slide-active [data-gsap="paragraph"] ,.swiper-slide-active [data-gsap="heading"] ', {
         types: 'words'
     });
+
 
     // Animate each word individually
     gsap.fromTo(splitText.words, 
         {opacity: 0, y: 10}, 
-        {opacity: 1, y: 0, ease: 'power4.inOut', stagger: 0.03}
+        {opacity: 1, y: 0, ease: 'power4.inOut', stagger: 0.03, delay: 0.1}
     );
 
     // Animate the grid container
-    gsap.fromTo('.swiper-slide-active .slide_content-wrapper .flex_center_start .grid_col-2', 
+    gsap.fromTo('.swiper-slide-active [data-gsap="buttons"]', 
         {scale: 0.9, opacity: 0}, 
         {duration: 0.5, scale: 1, opacity: 1, ease: 'power4.inOut', delay: 0.6}
     );
 
     // Animate the logo track
-    gsap.fromTo('[data-logotrack]', 
+    gsap.fromTo('.swiper-slide-active [data-logotrack]', 
         {y: 15, opacity: 0}, 
         {duration: 0.8, y: 0, opacity: 1.5, ease: 'power4.inOut', delay: 0.6}
     );
 
     // Animate the image with scaling and fading
-    gsap.fromTo('.swiper-slide-active img', 
+    gsap.fromTo('.swiper-slide-active [data-gsap="image"]', 
         {scale: 0.9, opacity: 0}, 
         {duration: 0.5, scale: 1, opacity: 1, ease: "back.out(2)", delay: 0.2}
     );
