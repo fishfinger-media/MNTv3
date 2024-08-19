@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import SplitType from 'split-type';
 
 // Initialize Swiper
-const swiper = new Swiper('.swiper.is-home', {
+const HomeSwiper = new Swiper('.swiper.is-home', {
     modules: [Navigation, Pagination, Mousewheel], 
     wrapperClass: 'swiper_wrapper',
     slideClass: 'swiper_slide',
@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper.is-home', {
 });
 
 // Initialize Swiper
-const swiper = new Swiper('.swiper.is-buy', {
+const BuySwiper = new Swiper('.swiper.is-buy', {
     modules: [Navigation, Pagination, Mousewheel], 
     wrapperClass: 'swiper_wrapper',
     slideClass: 'swiper_slide',
