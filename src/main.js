@@ -3,7 +3,7 @@ import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import gsap from 'gsap';
 import SplitType from 'split-type';
 
-// Initialize Swiper
+// HOME SWIPER
 const HomeSwiper = new Swiper('[data-swiper="homepage"]', {
     modules: [Navigation, Pagination, Mousewheel], 
     wrapperClass: 'home_slider-container',
@@ -25,11 +25,11 @@ const HomeSwiper = new Swiper('[data-swiper="homepage"]', {
     }
 });
 
-// Initialize Swiper
-const BuySwiper = new Swiper('.swiper.is-buy', {
+// BUY PAGE SWIPER
+const BuySwiper = new Swiper('[data-swiper="buy"]', {
     modules: [Navigation, Pagination, Mousewheel], 
-    wrapperClass: 'swiper_wrapper',
-    slideClass: 'swiper_slide',
+    wrapperClass: 'slider-container',
+    slideClass: 'section_buy_form',
     direction: 'vertical',
     mousewheel: false,
     slidesPerView: 1,
