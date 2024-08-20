@@ -4,10 +4,10 @@ import gsap from 'gsap';
 import SplitType from 'split-type';
 
 // Initialize Swiper
-const HomeSwiper = new Swiper('.swiper.is-home', {
+const HomeSwiper = new Swiper('[data-swiper="homepage"]', {
     modules: [Navigation, Pagination, Mousewheel], 
-    wrapperClass: 'swiper_wrapper',
-    slideClass: 'swiper_slide',
+    wrapperClass: 'home_slider-container',
+    slideClass: 'section_home-slide',
     direction: 'vertical',
     mousewheel: true,
     slidesPerView: 1,
@@ -64,19 +64,19 @@ function animateSlideContent() {
     );
 
     // Animate the grid container
-    gsap.fromTo('.swiper-slide-active [data-gsap="buttons"]', 
+    gsap.fromTo('.swiper-slide-active .button_wrapper', 
         {scale: 0.9, opacity: 0}, 
         {duration: 0.5, scale: 1, opacity: 1, ease: 'power4.inOut', delay: 0.6}
     );
 
     // Animate the logo track
-    gsap.fromTo('.swiper-slide-active [data-logotrack]', 
+    gsap.fromTo('.swiper-slide-active .logo-track_wrapper', 
         {y: 15, opacity: 0}, 
         {duration: 0.8, y: 0, opacity: 1.5, ease: 'power4.inOut', delay: 0.6}
     );
 
     // Animate the image with scaling and fading
-    gsap.fromTo('.swiper-slide-active [data-gsap="image"]', 
+    gsap.fromTo('.swiper-slide-active .slide_image-container', 
         {scale: 0.9, opacity: 0}, 
         {duration: 0.5, scale: 1, opacity: 1, ease: "back.out(2)", delay: 0.2}
     );
@@ -88,7 +88,7 @@ window.addEventListener('load', function() {
 });
 
 
-const rotatingImage = document.querySelectorAll(".slide_image")
+const rotatingImage = document.querySelectorAll(".slide_image-container")
 
 document.addEventListener("mousemove", (event) => {
   const mouseX = event.clientX;
