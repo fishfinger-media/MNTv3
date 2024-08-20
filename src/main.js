@@ -32,6 +32,7 @@ const BuySwiper = new Swiper('[data-swiper="buy"]', {
     slideClass: 'section_buy_form',
     direction: 'vertical',
     mousewheel: false,
+    allowTouchMove: false,
     slidesPerView: 1,
     
     navigation: {
