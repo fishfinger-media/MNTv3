@@ -70,7 +70,7 @@ function animateSlideContent() {
     );
 
     // Animate the logo track
-    gsap.fromTo('.swiper-slide-active .logo-track_wrapper', 
+    gsap.fromTo('.swiper-slide-active [data-gsap="item"]', 
         {y: 15, opacity: 0}, 
         {duration: 0.8, y: 0, opacity: 1.5, ease: 'power4.inOut', delay: 0.6}
     );
